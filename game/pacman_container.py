@@ -2515,18 +2515,28 @@ def step(action):
 def GetScore():
     return thisGame.score
 
-run = False
+def IsGameOver():
+    return thisGame.mode == 3
+
+mode = 0
 def main():
     parser = argparse.ArgumentParser(description='A Pacman game.')
     parser.add_argument('-run',action='store_true')
+    parser.add_argument('-step', action='store_true')
     args = vars(parser.parse_args())
+    global mode
     if args['run']:
-        global run
-        run = True
+        mode = 1
+    if args['step']:
+        mode = 2
 
 if __name__ == "__main__":
     main()
 
-if(run):
+if mode == 1:
     while True:
         step(0)
+elif mode == 2:
+    while True:
+        if  pygame.key.get_pressed()[pygame.K_END]:
+            step(0)

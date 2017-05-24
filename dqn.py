@@ -139,7 +139,7 @@ def exerciseNetwork(model):
             action_index = tact
             print("User action: ", action_index)
         
-        if(terminal):
+        if(pacman.IsGameOver()):
             print("Gameover. ",MODEL_NAME, " scored: ", pacman.GetScore())
 
         # preprocess first to remove extra data and highlight contours
