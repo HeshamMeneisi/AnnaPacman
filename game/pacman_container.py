@@ -7,6 +7,7 @@ FPS = 60
 STARTGAMERW = 0.1
 ALIVERWARD = 0.01
 HITGHOSTRW = -1
+STILLRW = -0.01
 
 # WIN???
 
@@ -2303,7 +2304,12 @@ def step(action):
 
         thisGame.modeTimer += 1
 
+        x = player.x
+        y = player.y
+
         player.Move()
+
+        pos_changed = (player.x != x) | (player.y != y)
 
         for i in range(0, 4, 1):
             ghosts[i].Move()
@@ -2311,8 +2317,9 @@ def step(action):
         thisFruit.Move()
 
         sdif = thisGame.score - score
-
-        if sdif > 10:
+        if not pos_changed:
+            reward = STILLRW
+        elif sdif > 10:
             sdif = 1
         elif sdif > 0:
             sdif = 0.9
@@ -2323,7 +2330,7 @@ def step(action):
             reward = HITGHOSTRW
         else:
             reward = reward + sdif
-        if thisGame.mode == 3 | thisGame.mode > 5:
+        if thisGame.mode == 2 | thisGame.mode == 3 | thisGame.mode > 5:
             terminal = 1
 
 
