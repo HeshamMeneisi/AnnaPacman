@@ -4,10 +4,11 @@ from pygame.locals import *
 
 FPS = 60
 
-STARTGAMERW = 0.1
+STARTGAMERW = 1
 ALIVERW = 0.01
-HITGHOSTRW = -1
-STILLRW = -0.01
+HITGHOSTDET = -1
+STILLDET = -0.01
+RETDET = -0.05
 
 # WIN???
 
@@ -2327,13 +2328,15 @@ def step(action):
             sdif = 0
 
         if thisGame.mode == 2:
-            reward = HITGHOSTRW
+            reward = HITGHOSTDET
+        elif action == 5:
+            reward = RETDET
         elif sdif > 0:
             reward = sdif
         elif pos_changed:
             reward = ALIVERW
         else:
-            reward = STILLRW
+            reward = STILLDET
 
         terminal = 0
 
@@ -2370,6 +2373,9 @@ def step(action):
         # game over
         if action != 5: # anything but enter is useless
             reward = 0
+        else:
+            reward = STARTGAMERW
+
         terminal = 1
         tact = CheckInputs(action)
 
@@ -2414,11 +2420,11 @@ def step(action):
         if thisGame.modeTimer == 30:
             thisGame.SetMode(7)
 
-            oldEdgeLightColor = thisLevel.edgeLightColor
-
-            oldEdgeShadowColor = thisLevel.edgeShadowColor
-
-            oldFillColor = thisLevel.fillColor
+            # oldEdgeLightColor = thisLevel.edgeLightColor
+            #
+            # oldEdgeShadowColor = thisLevel.edgeShadowColor
+            #
+            # oldFillColor = thisLevel.fillColor
 
 
 
