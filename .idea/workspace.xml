@@ -35,8 +35,8 @@
       <file leaf-file-name="pacman_container.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game/pacman_container.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="2319" column="27" selection-start-line="2319" selection-start-column="27" selection-end-line="2319" selection-end-column="27" />
+            <state relative-caret-position="231">
+              <caret line="631" column="18" selection-start-line="631" selection-start-column="18" selection-end-line="631" selection-end-column="18" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -418,8 +418,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game/pacman_container.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="2319" column="27" selection-start-line="2319" selection-start-column="27" selection-end-line="2319" selection-end-column="27" />
+        <state relative-caret-position="231">
+          <caret line="631" column="18" selection-start-line="631" selection-start-column="18" selection-end-line="631" selection-end-column="18" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

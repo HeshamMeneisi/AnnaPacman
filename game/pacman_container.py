@@ -628,7 +628,8 @@ class path_finder():
 
     def GetF(self, c):
 
-        return self.map[self.Unfold(c)].f
+        r = self.map[self.Unfold(c)]
+        return r.f
 
     def GetG(self, c):
 
@@ -2329,7 +2330,7 @@ def step(action):
         if thisGame.mode == 2:
             reward = HITGHOSTRW
         else:
-            reward = reward + sdif
+            reward = sdif
         if thisGame.mode == 2 | thisGame.mode == 3 | thisGame.mode > 5:
             terminal = 1
 
