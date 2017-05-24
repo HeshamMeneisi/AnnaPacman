@@ -6,8 +6,7 @@ FPS = 60
 
 STARTGAMERW = 0.1
 ALIVERWARD = 0.01
-HITGHOSTRW = -25
-SCOREDIV = 10
+HITGHOSTRW = -1
 
 # WIN???
 
@@ -2310,10 +2309,20 @@ def step(action):
             ghosts[i].Move()
 
         thisFruit.Move()
+
+        sdif = thisGame.score - score
+
+        if sdif > 10:
+            sdif = 1
+        elif sdif > 0:
+            sdif = 0.9
+        else:
+            sdif = 0
+
         if thisGame.mode == 2:
             reward = HITGHOSTRW
         else:
-            reward = reward + (thisGame.score - score)/SCOREDIV
+            reward = reward + sdif
         if thisGame.mode == 3 | thisGame.mode > 5:
             terminal = 1
 
