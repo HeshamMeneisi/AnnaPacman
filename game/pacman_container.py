@@ -5,7 +5,7 @@ from pygame.locals import *
 FPS = 60
 
 STARTGAMERW = 0.1
-ALIVERWARD = 0.01
+ALIVERW = 0.01
 HITGHOSTRW = -1
 STILLRW = -0.01
 
@@ -2292,8 +2292,8 @@ else:
 # stepfunc
 def step(action):
     tact = action
-    reward = ALIVERWARD
-    terminal = 0
+    reward = ALIVERW
+    terminal = 1
     CheckIfCloseButton(pygame.event.get())
 
     if thisGame.mode == 1:
@@ -2318,9 +2318,8 @@ def step(action):
         thisFruit.Move()
 
         sdif = thisGame.score - score
-        if not pos_changed:
-            reward = STILLRW
-        elif sdif > 10:
+
+        if sdif > 10:
             sdif = 1
         elif sdif > 0:
             sdif = 0.9
@@ -2329,10 +2328,14 @@ def step(action):
 
         if thisGame.mode == 2:
             reward = HITGHOSTRW
-        else:
+        elif sdif > 0:
             reward = sdif
-        if thisGame.mode == 2 | thisGame.mode == 3 | thisGame.mode > 5:
-            terminal = 1
+        elif pos_changed:
+            reward = ALIVERW
+        else:
+            reward = STILLRW
+
+        terminal = 0
 
 
     elif thisGame.mode == 2:
