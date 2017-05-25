@@ -2,13 +2,13 @@ import pygame, sys, os, random, argparse
 
 from pygame.locals import *
 
-FPS = 60
+FPS = 100
 
 STARTGAMERW = 1
-ALIVERW = 0.01
-HITGHOSTDET = -1
+ALIVERW = 0
+HITGHOSTDET = -2
 STILLDET = -0.01
-RETDET = -0.05
+STUCKDET = -0.1
 
 # WIN???
 
@@ -945,14 +945,9 @@ class ghost():
                 self.FollowNextPathWay()
 
     def FollowNextPathWay(self):
-
-        # print("Ghost " + str(self.id) + " rem: " + self.currentPath)
-
-
-
         # only follow this pathway if there is a possible path found!
 
-        if not self.currentPath == False:
+        if self.currentPath != False:
 
             if len(self.currentPath) > 0:
 
@@ -986,6 +981,8 @@ class ghost():
 
                     self.currentPath = path.FindPath((self.nearestRow, self.nearestCol),
                                                      (player.nearestRow, player.nearestCol))
+                    if len(self.currentPath) == 0:
+                        print("**************Stackoverflow incoming!")
 
                     self.FollowNextPathWay()
 
@@ -1731,7 +1728,7 @@ class level():
 
                     if useTile == tileID['pellet-power']:
 
-                        if self.powerPelletBlinkTimer < 30:
+                        if self.powerPelletBlinkTimer < 15:
                             screen.blit(tileIDImage[useTile], (
                             col * 16 - thisGame.screenPixelOffset[0], row * 16 - thisGame.screenPixelOffset[1]))
 
@@ -2294,7 +2291,7 @@ else:
 def step(action):
     tact = action
     reward = ALIVERW
-    terminal = 1
+    terminal = 0
     CheckIfCloseButton(pygame.event.get())
 
     if thisGame.mode == 1:
@@ -2321,24 +2318,23 @@ def step(action):
         sdif = thisGame.score - score
 
         if sdif > 10:
-            sdif = 1
+            sdif = 0.05 # Because if set too high, it will chase ghosts. Grayscale is not that informative
         elif sdif > 0:
-            sdif = 0.9
+            sdif = 1
         else:
             sdif = 0
 
-        if thisGame.mode == 2:
+        if (thisGame.mode == 2) | (thisGame.mode == 3):
             reward = HITGHOSTDET
-        elif action == 5:
-            reward = RETDET
+            terminal = 1
         elif sdif > 0:
             reward = sdif
         elif pos_changed:
             reward = ALIVERW
-        else:
+        elif action == 0:
             reward = STILLDET
-
-        terminal = 0
+        else:
+            reward = STUCKDET
 
 
     elif thisGame.mode == 2:
@@ -2349,7 +2345,7 @@ def step(action):
 
         thisGame.modeTimer += 1
 
-        if thisGame.modeTimer == 30:
+        if thisGame.modeTimer == 15:
 
             thisLevel.Restart()
 
@@ -2371,12 +2367,11 @@ def step(action):
 
     elif thisGame.mode == 3:
         # game over
-        if action != 5: # anything but enter is useless
-            reward = 0
-        else:
+        if action == 5: # anything but enter is useless
             reward = STARTGAMERW
+        else:
+            reward = STUCKDET
 
-        terminal = 1
         tact = CheckInputs(action)
 
 
@@ -2389,7 +2384,7 @@ def step(action):
 
         thisGame.modeTimer += 1
 
-        if thisGame.modeTimer == 30:
+        if thisGame.modeTimer == 15:
             thisGame.SetMode(1)
 
             player.velX = player.speed
@@ -2404,7 +2399,7 @@ def step(action):
 
         thisGame.modeTimer += 1
 
-        if thisGame.modeTimer == 30:
+        if thisGame.modeTimer == 15:
             thisGame.SetMode(1)
 
 
@@ -2417,7 +2412,7 @@ def step(action):
 
         thisGame.modeTimer += 1
 
-        if thisGame.modeTimer == 30:
+        if thisGame.modeTimer == 15:
             thisGame.SetMode(7)
 
             # oldEdgeLightColor = thisLevel.edgeLightColor
@@ -2458,7 +2453,7 @@ def step(action):
 
             GetCrossRef()
 
-        elif thisGame.modeTimer == 30:
+        elif thisGame.modeTimer == 15:
 
             thisGame.SetMode(8)
 
