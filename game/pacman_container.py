@@ -13,7 +13,7 @@ STUCKDET = -0.1
 # WIN???
 
 SCRIPT_PATH = sys.path[0]
-if not SCRIPT_PATH.endswith("\\game"):
+if not SCRIPT_PATH.endswith("game"):
     SCRIPT_PATH += "\\game"
 
 # NO_GIF_TILES -- tile numbers which do not correspond to a GIF file
@@ -274,6 +274,8 @@ class game():
         self.screenTileSize = (23, 21)
 
         self.screenSize = (self.screenTileSize[1] * 16, self.screenTileSize[0] * 16)
+
+        print("Game Frame Size = ", self.screenSize)
 
         # numerical display digits
 
@@ -978,11 +980,30 @@ class ghost():
                 if not self.state == 3:
 
                     # chase pac-man
-
                     self.currentPath = path.FindPath((self.nearestRow, self.nearestCol),
                                                      (player.nearestRow, player.nearestCol))
                     if len(self.currentPath) == 0:
-                        print("**************Stackoverflow incoming!")
+                        print("******** Overflow case")
+                        cords = [-1,-1,-1,-1]
+                        j = 0
+
+                        for i in range(0, 80):
+                            self.currentPath = path.FindPath((self.nearestRow + cords[0], self.nearestCol + cords[1]),
+                                                             (player.nearestRow + cords[2],
+                                                              player.nearestCol + cords[3]))
+                            if self.currentPath and len(self.currentPath) > 0:
+                                print("******** The fix worked")
+                                break
+                            cords[j] = cords[j] + 1
+                            while (j < 4) and (cords[j] == 2):
+                                cords[j] = -1
+                                j = j + 1
+                                cords[j] = cords[j]+1
+
+                            j = 0
+
+                    if len(self.currentPath) == 0:
+                        print("******** Stack overflow quick fix failed")
 
                     self.FollowNextPathWay()
 
@@ -2219,10 +2240,6 @@ def GetCrossRef():
 
                         tileIDImage[thisID].set_at((x,y), thisLevel.pelletColor)
 
-
-
-                        # print(str_splitBySpace[0] + " is married to " + str_splitBySpace[1])
-
         lineNum += 1
 
 
@@ -2499,9 +2516,9 @@ def step(action):
 
     thisGame.DrawScore()
 
-    image = pygame.surfarray.array3d(pygame.display.get_surface())
-
     pygame.display.flip()
+
+    image = pygame.surfarray.array3d(pygame.display.get_surface())
 
     clock.tick(FPS)
 
