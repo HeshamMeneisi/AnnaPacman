@@ -4,17 +4,16 @@ from pygame.locals import *
 
 FPS = 100
 
-STARTGAMERW = 1
+STARTGAMERW = 2
 ALIVERW = 0
 HITGHOSTDET = -2
 STILLDET = -0.01
-STUCKDET = -0.1
+STUCKDET = -0.2
 
-# WIN???
 
 SCRIPT_PATH = sys.path[0]
-if not SCRIPT_PATH.endswith("game"):
-    SCRIPT_PATH += "\\game"
+if not SCRIPT_PATH.endswith('game'):
+    SCRIPT_PATH = os.path.join(SCRIPT_PATH, 'game')
 
 # NO_GIF_TILES -- tile numbers which do not correspond to a GIF file
 
@@ -2524,11 +2523,14 @@ def step(action):
 
     return [image, reward, terminal, tact]
 
+
 def GetScore():
     return thisGame.score
 
+
 def IsGameOver():
     return thisGame.mode == 3
+
 
 mode = 0
 def main():
@@ -2550,5 +2552,5 @@ if mode == 1:
         step(0)
 elif mode == 2:
     while True:
-        if  pygame.key.get_pressed()[pygame.K_END]:
+        if pygame.key.get_pressed()[pygame.K_END]:
             step(0)

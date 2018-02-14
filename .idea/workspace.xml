@@ -1,7 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0317c047-1cd9-4563-882d-666c05ca5287" name="Default" comment="" />
+    <list default="true" id="0317c047-1cd9-4563-882d-666c05ca5287" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env_test.py" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/AnnaPacman.iml" afterPath="$PROJECT_DIR$/.idea/AnnaPacman.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/dqn.py" afterPath="$PROJECT_DIR$/dqn.py" />
+      <change beforePath="$PROJECT_DIR$/game/pacman_container.py" afterPath="$PROJECT_DIR$/game/pacman_container.py" />
+      <change beforePath="$PROJECT_DIR$/game/res/VeraMoBd.ttf" afterPath="$PROJECT_DIR$/game/res/VeraMoBd.ttf" />
+      <change beforePath="$PROJECT_DIR$/game/res/backgrounds/1.gif" afterPath="$PROJECT_DIR$/game/res/backgrounds/1.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/crossref.txt" afterPath="$PROJECT_DIR$/game/res/crossref.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/hiscore.txt" afterPath="$PROJECT_DIR$/game/res/hiscore.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/levels/0.txt" afterPath="$PROJECT_DIR$/game/res/levels/0.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/levels/1.txt" afterPath="$PROJECT_DIR$/game/res/levels/1.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/levels/10.txt" afterPath="$PROJECT_DIR$/game/res/levels/10.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/levels/11.txt" afterPath="$PROJECT_DIR$/game/res/levels/11.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/levels/12.txt" afterPath="$PROJECT_DIR$/game/res/levels/12.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/levels/2.txt" afterPath="$PROJECT_DIR$/game/res/levels/2.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/levels/3.txt" afterPath="$PROJECT_DIR$/game/res/levels/3.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/levels/4.txt" afterPath="$PROJECT_DIR$/game/res/levels/4.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/levels/5.txt" afterPath="$PROJECT_DIR$/game/res/levels/5.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/levels/6.txt" afterPath="$PROJECT_DIR$/game/res/levels/6.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/levels/7.txt" afterPath="$PROJECT_DIR$/game/res/levels/7.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/levels/8.txt" afterPath="$PROJECT_DIR$/game/res/levels/8.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/levels/9.txt" afterPath="$PROJECT_DIR$/game/res/levels/9.txt" />
+      <change beforePath="$PROJECT_DIR$/game/res/sounds/eatfruit.wav" afterPath="$PROJECT_DIR$/game/res/sounds/eatfruit.wav" />
+      <change beforePath="$PROJECT_DIR$/game/res/sounds/eatgh2.wav" afterPath="$PROJECT_DIR$/game/res/sounds/eatgh2.wav" />
+      <change beforePath="$PROJECT_DIR$/game/res/sounds/extralife.wav" afterPath="$PROJECT_DIR$/game/res/sounds/extralife.wav" />
+      <change beforePath="$PROJECT_DIR$/game/res/sounds/fruitbounce.wav" afterPath="$PROJECT_DIR$/game/res/sounds/fruitbounce.wav" />
+      <change beforePath="$PROJECT_DIR$/game/res/sounds/pellet1.wav" afterPath="$PROJECT_DIR$/game/res/sounds/pellet1.wav" />
+      <change beforePath="$PROJECT_DIR$/game/res/sounds/pellet2.wav" afterPath="$PROJECT_DIR$/game/res/sounds/pellet2.wav" />
+      <change beforePath="$PROJECT_DIR$/game/res/sounds/powerpellet.wav" afterPath="$PROJECT_DIR$/game/res/sounds/powerpellet.wav" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/fruit 0.gif" afterPath="$PROJECT_DIR$/game/res/sprite/fruit 0.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/fruit 1.gif" afterPath="$PROJECT_DIR$/game/res/sprite/fruit 1.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/fruit 2.gif" afterPath="$PROJECT_DIR$/game/res/sprite/fruit 2.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/fruit 3.gif" afterPath="$PROJECT_DIR$/game/res/sprite/fruit 3.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/fruit 4.gif" afterPath="$PROJECT_DIR$/game/res/sprite/fruit 4.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/ghost 1.gif" afterPath="$PROJECT_DIR$/game/res/sprite/ghost 1.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/ghost 2.gif" afterPath="$PROJECT_DIR$/game/res/sprite/ghost 2.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/ghost 3.gif" afterPath="$PROJECT_DIR$/game/res/sprite/ghost 3.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/ghost 4.gif" afterPath="$PROJECT_DIR$/game/res/sprite/ghost 4.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/ghost 5.gif" afterPath="$PROJECT_DIR$/game/res/sprite/ghost 5.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/ghost 6.gif" afterPath="$PROJECT_DIR$/game/res/sprite/ghost 6.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-d 1.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-d 1.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-d 2.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-d 2.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-d 3.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-d 3.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-d 4.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-d 4.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-d 5.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-d 5.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-d 6.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-d 6.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-d 7.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-d 7.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-d 8.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-d 8.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-l 1.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-l 1.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-l 2.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-l 2.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-l 3.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-l 3.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-l 4.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-l 4.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-l 5.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-l 5.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-l 6.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-l 6.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-l 7.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-l 7.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-l 8.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-l 8.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-r 1.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-r 1.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-r 2.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-r 2.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-r 3.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-r 3.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-r 4.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-r 4.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-r 5.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-r 5.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-r 6.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-r 6.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-r 7.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-r 7.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-r 8.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-r 8.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-u 1.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-u 1.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-u 2.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-u 2.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-u 3.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-u 3.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-u 4.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-u 4.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-u 5.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-u 5.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-u 6.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-u 6.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-u 7.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-u 7.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman-u 8.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman-u 8.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/sprite/pacman.gif" afterPath="$PROJECT_DIR$/game/res/sprite/pacman.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/text/0.gif" afterPath="$PROJECT_DIR$/game/res/text/0.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/text/1.gif" afterPath="$PROJECT_DIR$/game/res/text/1.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/text/2.gif" afterPath="$PROJECT_DIR$/game/res/text/2.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/text/3.gif" afterPath="$PROJECT_DIR$/game/res/text/3.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/text/4.gif" afterPath="$PROJECT_DIR$/game/res/text/4.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/text/5.gif" afterPath="$PROJECT_DIR$/game/res/text/5.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/text/6.gif" afterPath="$PROJECT_DIR$/game/res/text/6.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/text/7.gif" afterPath="$PROJECT_DIR$/game/res/text/7.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/text/8.gif" afterPath="$PROJECT_DIR$/game/res/text/8.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/text/9.gif" afterPath="$PROJECT_DIR$/game/res/text/9.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/text/gameover.gif" afterPath="$PROJECT_DIR$/game/res/text/gameover.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/text/life.gif" afterPath="$PROJECT_DIR$/game/res/text/life.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/text/logo.gif" afterPath="$PROJECT_DIR$/game/res/text/logo.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/text/ready.gif" afterPath="$PROJECT_DIR$/game/res/text/ready.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/blank.gif" afterPath="$PROJECT_DIR$/game/res/tiles/blank.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/door-h.gif" afterPath="$PROJECT_DIR$/game/res/tiles/door-h.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/door-v.gif" afterPath="$PROJECT_DIR$/game/res/tiles/door-v.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/ghost-blinky.gif" afterPath="$PROJECT_DIR$/game/res/tiles/ghost-blinky.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/ghost-door.gif" afterPath="$PROJECT_DIR$/game/res/tiles/ghost-door.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/ghost-inky.gif" afterPath="$PROJECT_DIR$/game/res/tiles/ghost-inky.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/ghost-pinky.gif" afterPath="$PROJECT_DIR$/game/res/tiles/ghost-pinky.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/ghost-sue.gif" afterPath="$PROJECT_DIR$/game/res/tiles/ghost-sue.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/glasses.gif" afterPath="$PROJECT_DIR$/game/res/tiles/glasses.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/hiscores.gif" afterPath="$PROJECT_DIR$/game/res/tiles/hiscores.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/pellet-power.gif" afterPath="$PROJECT_DIR$/game/res/tiles/pellet-power.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/pellet.gif" afterPath="$PROJECT_DIR$/game/res/tiles/pellet.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/showlogo.gif" afterPath="$PROJECT_DIR$/game/res/tiles/showlogo.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/start.gif" afterPath="$PROJECT_DIR$/game/res/tiles/start.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-corner-ll.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-corner-ll.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-corner-lr.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-corner-lr.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-corner-ul.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-corner-ul.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-corner-ur.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-corner-ur.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-end-b.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-end-b.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-end-l.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-end-l.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-end-r.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-end-r.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-end-t.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-end-t.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-nub.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-nub.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-straight-horiz.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-straight-horiz.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-straight-vert.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-straight-vert.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-t-bottom.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-t-bottom.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-t-left.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-t-left.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-t-right.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-t-right.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-t-top.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-t-top.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/wall-x.gif" afterPath="$PROJECT_DIR$/game/res/tiles/wall-x.gif" />
+      <change beforePath="$PROJECT_DIR$/game/res/tiles/x-paintwall.gif" afterPath="$PROJECT_DIR$/game/res/tiles/x-paintwall.gif" />
+    </list>
     <ignored path="AnnaPacman.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,63 +136,113 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/AnnaPacman$Train.coverage" NAME="Train Coverage Results" MODIFIED="1518635741074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AnnaPacman$Game.coverage" NAME="Play Coverage Results" MODIFIED="1518635662606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AnnaPacman$gputest.coverage" NAME="Test Environment Coverage Results" MODIFIED="1518632907509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AnnaPacman$Test.coverage" NAME="Test Coverage Results" MODIFIED="1518635105918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="AnnaPacman" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="dqn.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dqn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1211">
-              <caret line="272" column="34" selection-start-line="272" selection-start-column="34" selection-end-line="272" selection-end-column="34" />
+            <state relative-caret-position="324">
+              <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#3749#4481#0" expanded="false" />
+                <element signature="e#4528#5299#0" expanded="false" />
+                <element signature="e#5325#5739#0" expanded="false" />
+                <element signature="e#5775#6146#0" expanded="false" />
+                <element signature="e#6173#6700#0" expanded="false" />
+                <element signature="e#6732#7973#0" expanded="false" />
+                <element signature="e#8003#9507#0" expanded="false" />
+                <element signature="e#9534#9769#0" expanded="false" />
+                <element signature="e#9801#10120#0" expanded="false" />
+                <element signature="e#10156#17892#0" expanded="false" />
+                <element signature="e#17917#18040#0" expanded="false" />
+                <element signature="e#18059#18807#0" expanded="false" />
+                <element signature="e#18841#19094#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pool.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/multiprocessing/pool.py">
+      <file leaf-file-name="pacman_container.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game/pacman_container.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="364" column="0" selection-start-line="364" selection-start-column="0" selection-end-line="364" selection-end-column="0" />
+            <state relative-caret-position="234">
+              <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="env_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/env_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>T =</find>
+      <find>t +=</find>
+      <find>Cannot assign a device for operation</find>
+      <find>reward</find>
+      <find>BATCH</find>
+      <find>GAMMA</find>
+      <find>os.</find>
+      <find>&quot;\\&quot;</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/qdn.py" />
+        <option value="$PROJECT_DIR$/gputest.py" />
+        <option value="$PROJECT_DIR$/env_test.py" />
         <option value="$PROJECT_DIR$/game/pacman_container.py" />
         <option value="$PROJECT_DIR$/dqn.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="540" />
+    <option name="y" value="136" />
+    <option name="width" value="1313" />
+    <option name="height" value="847" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -84,62 +259,120 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AnnaPacman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AnnaPacman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AnnaPacman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AnnaPacman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AnnaPacman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AnnaPacman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AnnaPacman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Anna" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="AnnaPacman" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AnnaPacman" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AnnaPacman" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AnnaPacman" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test/AnnaPacman" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Test">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.Train">
+    <configuration name="Play" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AnnaPacman" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/game/pacman_container.py" />
+      <option name="PARAMETERS" value="-run" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Test Environment" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AnnaPacman" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/env_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Test" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AnnaPacman" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dqn.py" />
+      <option name="PARAMETERS" value="-m Test -iw -v" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Train" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AnnaPacman" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dqn.py" />
+      <option name="PARAMETERS" value="-m Train -iw -v" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -274,62 +507,17 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Train" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\Hesham\AppData\Local\Programs\Python\Python35\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="AnnaPacman" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dqn.py" />
-      <option name="PARAMETERS" value="-m Train -iw -v" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Test" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\Hesham\AppData\Local\Programs\Python\Python35\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="AnnaPacman" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dqn.py" />
-      <option name="PARAMETERS" value="-m Test -iw -v" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Game" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\Hesham\AppData\Local\Programs\Python\Python35\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="AnnaPacman" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/game/pacman_container.py" />
-      <option name="PARAMETERS" value="-run" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.Train" />
       <item index="1" class="java.lang.String" itemvalue="Python.Test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Game" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Play" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Test Environment" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.Test Environment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -357,25 +545,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.4902439" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.18229167" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.8177083" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32822084" sideWeight="0.19191375" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32822084" sideWeight="0.8080863" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17681941" sideWeight="0.4902439" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5097561" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3535188" sideWeight="0.72991073" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35276073" sideWeight="0.7234501" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5097561" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -398,6 +589,9 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -418,107 +612,153 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="154" />
+      <option name="time" value="158" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/dqn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#3749#4481#0" expanded="false" />
+            <element signature="e#4528#5299#0" expanded="false" />
+            <element signature="e#5325#5739#0" expanded="false" />
+            <element signature="e#5775#6146#0" expanded="false" />
+            <element signature="e#6173#6700#0" expanded="false" />
+            <element signature="e#6732#7973#0" expanded="false" />
+            <element signature="e#8003#9507#0" expanded="false" />
+            <element signature="e#9534#9769#0" expanded="false" />
+            <element signature="e#9801#10120#0" expanded="false" />
+            <element signature="e#10156#17892#0" expanded="false" />
+            <element signature="e#17917#18040#0" expanded="false" />
+            <element signature="e#18059#18807#0" expanded="false" />
+            <element signature="e#18841#19094#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
-          <caret line="695" column="0" selection-start-line="695" selection-start-column="0" selection-end-line="695" selection-end-column="0" />
+          <caret line="695" column="0" lean-forward="false" selection-start-line="695" selection-start-column="0" selection-end-line="695" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/matplotlib/image.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/matplotlib/artist.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/numpy/core/shape_base.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/genericpath.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/random.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/codecs.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/keras/legacy/interfaces.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/numpy/lib/npyio.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/multiprocessing/pool.py" />
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/theano/tensor/elemwise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="337" column="6" lean-forward="false" selection-start-line="337" selection-start-column="6" selection-end-line="337" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/matplotlib/image.py">
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/keras/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4343">
-          <caret line="456" column="30" selection-start-line="456" selection-start-column="30" selection-end-line="456" selection-end-column="30" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/op_def_library.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="786" column="39" lean-forward="true" selection-start-line="786" selection-start-column="39" selection-end-line="786" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/matplotlib/artist.py">
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/gen_math_ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="1279" column="32" selection-start-line="1279" selection-start-column="30" selection-end-line="1279" selection-end-column="32" />
+        <state relative-caret-position="376">
+          <caret line="1577" column="27" lean-forward="true" selection-start-line="1577" selection-start-column="27" selection-end-line="1577" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/errors_impl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="470" column="23" lean-forward="true" selection-start-line="470" selection-start-column="23" selection-end-line="470" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-64281">
+          <caret line="1475" column="44" lean-forward="true" selection-start-line="1475" selection-start-column="44" selection-end-line="1475" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/skimage/transform/_warps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1314">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="701" column="0" lean-forward="false" selection-start-line="701" selection-start-column="0" selection-end-line="701" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game/pacman_container.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="2520" column="66" selection-start-line="2520" selection-start-column="3" selection-end-line="2520" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/numpy/core/shape_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="341" column="0" selection-start-line="341" selection-start-column="0" selection-end-line="341" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/genericpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="314" column="0" selection-start-line="314" selection-start-column="0" selection-end-line="314" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="308" column="0" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/keras/legacy/interfaces.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1349">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/numpy/lib/npyio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="361" column="0" selection-start-line="361" selection-start-column="0" selection-end-line="361" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/multiprocessing/pool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="364" column="0" selection-start-line="364" selection-start-column="0" selection-end-line="364" selection-end-column="0" />
+        <state relative-caret-position="234">
+          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dqn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1211">
-          <caret line="272" column="34" selection-start-line="272" selection-start-column="34" selection-end-line="272" selection-end-column="34" />
+        <state relative-caret-position="324">
+          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#3749#4481#0" expanded="false" />
+            <element signature="e#4528#5299#0" expanded="false" />
+            <element signature="e#5325#5739#0" expanded="false" />
+            <element signature="e#5775#6146#0" expanded="false" />
+            <element signature="e#6173#6700#0" expanded="false" />
+            <element signature="e#6732#7973#0" expanded="false" />
+            <element signature="e#8003#9507#0" expanded="false" />
+            <element signature="e#9534#9769#0" expanded="false" />
+            <element signature="e#9801#10120#0" expanded="false" />
+            <element signature="e#10156#17892#0" expanded="false" />
+            <element signature="e#17917#18040#0" expanded="false" />
+            <element signature="e#18059#18807#0" expanded="false" />
+            <element signature="e#18841#19094#0" expanded="false" />
           </folding>
         </state>
       </provider>
