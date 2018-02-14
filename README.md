@@ -4,9 +4,13 @@ Anna is an AI trained using the DQN (Deep Q-Network) algorithm to play Pacman.
 # Dependencies
 
 python 3.5
+
 keras
+
 tensorflow/theano
+
 scikit-image
+
 h5py
 
 GPU Training:
