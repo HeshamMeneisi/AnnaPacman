@@ -27,7 +27,7 @@ OBSERVE_PERIOD = 5000       # Frames to observe before training
 EXPLORE_PERIOD = 1000000    # Iterations over which to anneal EPSILON from initial to final
 INITIAL_EPSILON = 0.1       # Starting value of EPSILON
 FINAL_EPSILON = 0.001       # Final value of EPSILON
-MEMORY_SIZE = 50000         # Number of previous transitions to remember
+MEMORY_SIZE = 500000        # Number of previous transitions to remember
 BATCH = 32                  # Size of experiences to train on
 FRAMES_PER_ACTION = 1       # The delay before taking another action (set to 1 for no delay)
 LEARNING_RATE = 1e-4        # Our network's learning rate
@@ -36,7 +36,7 @@ RESTORE_STATE = True        # Whether or not to restore a state if found
 RESTORE_MEMORY = True       # Whether or not to restore the experience memory if found
 # The image size, images are rotated 90 degrees in a matrix so the height is rows and the width is columns
 # It's better to use a square image because, otherwise, lines might get jagged or completely disappear while resizing
-IMG_ROWS , IMG_COLS = 132, 132
+IMG_ROWS, IMG_COLS = 132, 132
 
 # A map of all action names for logging
 AMAP = ['None', 'Right', 'Left', 'Down', 'Up', 'Enter']
@@ -65,7 +65,8 @@ STORAGE_SIZE = 0
 #     This is similar to how babies see the world upside down for the first few days.
 #     """
 #     plt.imshow(np.fliplr(skimage.transform.rotate(skimage.exposure.rescale_intensity(
-#         skimage.transform.resize(img, (IMG_ROWS, IMG_COLS)), (0, 255),-90))), cmap='gray')
+#         skimage.transform.resize(img, (IMG_ROWS, IMG_COLS)), (0, 255)), -90)), cmap='gray')
+#     plt.show()
 #     print("Waiting...")
 #     input()
 
@@ -156,7 +157,7 @@ def lookup_state():
     if os.path.exists(STATE_PATH):
         print("Found a state file, restoring...")
         (T, MODEL_VERSION, EPSILON, GAMMA) = np.load(STATE_PATH)
-        t = int(T) + 1
+        T = int(T) + 1
         MODEL_VERSION = int(MODEL_VERSION)
         print("State restored", "T =", T, "Version =", MODEL_VERSION, "EPSILON =", EPSILON, "GAMMA =", GAMMA)
         return True
@@ -221,7 +222,7 @@ def do_action(action):
     STATE_POINTER += 1
     if STATE_POINTER >= MEMORY_SIZE:
         STATE_POINTER = 0
-        FRAME_STORAGE[:, :, :, 0:3] = FRAME_STORAGE[:, :, :, MEMORY_SIZE:]  # Initial frames no longer the previous
+        FRAME_STORAGE[:, :, :, 0:FRAMES_PER_SAMPLE-1] = FRAME_STORAGE[:, :, :, MEMORY_SIZE:]
     idx = STATE_POINTER + FRAMES_PER_SAMPLE - 1
     FRAME_STORAGE[:, :, :, idx:idx+1] = x_next
 
@@ -284,7 +285,7 @@ def exercise_network(model):
         ACTIONS_LOG = np.zeros(MEMORY_SIZE, dtype=np.ubyte)
         TFLAG_LOG = np.zeros(MEMORY_SIZE, dtype=np.ubyte)
         TFLAG_LOG[STATE_POINTER] = 0
-        print("Maximum total memory usage of experience storage =", \
+        print("Maximum total memory usage of experience storage =",
               sys.getsizeof(FRAME_STORAGE) + sys.getsizeof(REWARD_LOG) + sys.getsizeof(TFLAG_LOG)), "bytes"
 
     else:  # Testing
@@ -311,6 +312,7 @@ def exercise_network(model):
     # Look for a saved state
     if RESTORE_STATE:
         lookup_state()
+        c = T
 
     # Look for a memory dump
     if RESTORE_MEMORY and PROG_MODE == 0:
@@ -354,9 +356,9 @@ def exercise_network(model):
 
         reward, terminal, action_index = do_action(action_index)
 
-        if pacman.IsGameOver():
+        if pacman.is_game_over():
             if not gameover_flag:
-                print("Gameover. ", MODEL_NAME, " scored: ", pacman.GetScore())
+                print("Gameover. ", MODEL_NAME, " scored: ", pacman.get_score())
                 gameover_flag = True
         else:
             gameover_flag = False
@@ -393,11 +395,10 @@ def exercise_network(model):
                     for i in range(0, BATCH):
                         idx = experiences[i]
                         nidx = (idx+1) % MEMORY_SIZE
-                        pnidx = (nidx+1) % MEMORY_SIZE
 
-                        state_0, t_0, action_0, reward_0 = get_state_data(idx)
+                        state_0, terminal_0, action_0, reward_0 = get_state_data(idx)
 
-                        state_1, terminal_1, action_1, reward_1 = get_state_data(nidx)
+                        state_1, t_1, a_1, reward_1 = get_state_data(nidx)
 
                         inputs[i:i + 1] = state_0
 
@@ -409,21 +410,12 @@ def exercise_network(model):
 
                         reward_1_max = np.max([np.max(Q_sa_1), reward_1])  # Maximum expected or experienced reward
 
-                        if terminal_1:
+                        if terminal_0:
                             # Game is over, we know the next reward is irrelevant
                             targets[i, action_0] = reward_0
-
-                            inputs[BATCH + i:BATCH + i + 1] = state_0
-                            targets[i] = Q_sa_0
-                            targets[i, action_1] = reward_0
-
                         else:
                             # Predict the expected reward increase
                             targets[i, action_0] = reward_0 + GAMMA * reward_1_max
-
-                            # Game is over for action_1
-                            targets[i, action_1] = reward_1
-
 
                     loss = model.train_on_batch(inputs, targets)
 
@@ -437,15 +429,10 @@ def exercise_network(model):
 
         if VERBOSE or T % REPORT_INTERVAL == 0 or (SIGRW and np.abs(reward) >= 0.1):
             # Print info
-            if PROG_MODE == 0:
-                print("V", MODEL_VERSION, "T", T, "| S", pacman.GetScore(), "| ST", STATE_LABELS[STATE],
-                      "| ACT (BEST)", AMAP[action_index], "(",AMAP[max_q], ")| RW", reward, "| TR", terminal,
-                      "| EXP", q[0][action_index],"(", q[0][max_q],
-                      ") | Loss ", loss, "| EPSILON", EPSILON, "| GAMMA", GAMMA)
-            elif PROG_MODE == 1:
-                print("V", MODEL_VERSION, "T", T, "| S", pacman.GetScore(), "| ST", STATE_LABELS[STATE],
-                      "| ACT (BEST)", AMAP[action_index], "(",AMAP[max_q], ") | RW", reward, "| TR", terminal,
-                      "| EXP", q[0][action_index], "(", q[0][max_q], ") | EPSILON", EPSILON)
+            print("V %d | T %d | Score %d | %s | ACT (BEST) %s (%s)| RW %.3f | TR %d | EXP %.5f (%.5f)\
+             Loss %.5f | EPSILON %.5f | GAMMA %.5f" % (MODEL_VERSION, T, pacman.get_score(), STATE_LABELS[STATE],
+                                                        AMAP[action_index], AMAP[max_q], reward, terminal,
+                                                        q[0][action_index], q[0][max_q], loss, EPSILON, GAMMA))
 
         T += 1
 
@@ -471,10 +458,13 @@ def main():
     VERBOSE = args['v']
     SIGRW = args['sig']
     INTERVENTION_WATCH = args['iw']
-    if args['mode'] == 'Train':
+    if args['mode'].lower() == 'train':
         PROG_MODE = 0
-    elif args['mode'] == 'Test':
+    elif args['mode'].lower() == 'test':
         PROG_MODE = 1
+    else:
+        print("Please set the mode to 'train' or 'test'")
+        exit(1)
     start_work()
 
 

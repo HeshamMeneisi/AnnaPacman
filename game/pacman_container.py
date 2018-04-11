@@ -6,7 +6,9 @@ FPS = 100
 
 STARTGAMERW = 2
 ALIVERW = 0
-HITGHOSTDET = -2
+PELLETRW = 1
+HITGHOSTDET = -5
+CATCHGHOSTRW = HITGHOSTDET  # For greyscale
 STILLDET = -0.01
 STUCKDET = -0.2
 
@@ -2093,7 +2095,7 @@ def CheckInputs(action):
 
     if thisGame.mode == 1:
 
-        if action == 1: # right
+        if action == 1:  # right
 
             if not thisLevel.CheckIfHitWall((player.x + player.speed, player.y),
                                             (player.nearestRow, player.nearestCol)):
@@ -2101,9 +2103,7 @@ def CheckInputs(action):
 
                 player.velY = 0
 
-
-
-        elif action == 2: # left
+        elif action == 2:  # left
 
             if not thisLevel.CheckIfHitWall((player.x - player.speed, player.y),
                                             (player.nearestRow, player.nearestCol)):
@@ -2111,9 +2111,7 @@ def CheckInputs(action):
 
                 player.velY = 0
 
-
-
-        elif action == 3: # down
+        elif action == 3:  # down
 
             if not thisLevel.CheckIfHitWall((player.x, player.y + player.speed),
                                             (player.nearestRow, player.nearestCol)):
@@ -2121,9 +2119,7 @@ def CheckInputs(action):
 
                 player.velY = player.speed
 
-
-
-        elif action == 4: # up
+        elif action == 4:  # up
 
             if not thisLevel.CheckIfHitWall((player.x, player.y - player.speed),
                                             (player.nearestRow, player.nearestCol)):
@@ -2131,13 +2127,12 @@ def CheckInputs(action):
 
                 player.velY = -player.speed
 
-
     elif thisGame.mode == 3:
 
         if action == 5:
             thisGame.StartNewGame()
 
-    return  action
+    return action
 
 # _____________________________________________
 
@@ -2303,60 +2298,25 @@ if pygame.joystick.get_count() > 0:
 else:
     js = None
 
-# stepfunc
-def step(action):
-    tact = action
-    reward = ALIVERW
-    terminal = 0
-    CheckIfCloseButton(pygame.event.get())
 
+def render(action):
+    pygame.event.get()
+    taken_action = action
     if thisGame.mode == 1:
-
         # normal gameplay mode
-        score = thisGame.score
 
-        tact = CheckInputs(action)
+        taken_action = CheckInputs(action)
 
         thisGame.modeTimer += 1
 
-        x = player.x
-        y = player.y
-
         player.Move()
-
-        pos_changed = (player.x != x) | (player.y != y)
 
         for i in range(0, 4, 1):
             ghosts[i].Move()
 
         thisFruit.Move()
 
-        sdif = thisGame.score - score
-
-        if sdif > 10:
-            sdif = 0.05 # Because if set too high, it will chase ghosts. Grayscale is not that informative
-        elif sdif > 0:
-            sdif = 1
-        else:
-            sdif = 0
-
-        if (thisGame.mode == 2) | (thisGame.mode == 3):
-            reward = HITGHOSTDET
-            terminal = 1
-        elif sdif > 0:
-            reward = sdif
-        elif pos_changed:
-            reward = ALIVERW
-        elif action == 0:
-            reward = STILLDET
-        else:
-            reward = STUCKDET
-
-
     elif thisGame.mode == 2:
-        if(action != 0): # if anything but no action it's useless
-            reward = 0
-
         # waiting after getting hit by a ghost
 
         thisGame.modeTimer += 1
@@ -2379,24 +2339,12 @@ def step(action):
 
                 thisGame.SetMode(4)
 
-
-
     elif thisGame.mode == 3:
         # game over
-        if action == 5: # anything but enter is useless
-            reward = STARTGAMERW
-        else:
-            reward = STUCKDET
-
-        tact = CheckInputs(action)
-
-
+        taken_action = CheckInputs(action)
 
     elif thisGame.mode == 4:
-
         # waiting to start
-        if (action != 0):  # if anything but no action it's useless
-            reward = 0
 
         thisGame.modeTimer += 1
 
@@ -2405,26 +2353,16 @@ def step(action):
 
             player.velX = player.speed
 
-
-
     elif thisGame.mode == 5:
-
         # brief pause after munching a vulnerable ghost
-        if (action != 0):  # if anything but no action it's useless
-            reward = 0
 
         thisGame.modeTimer += 1
 
         if thisGame.modeTimer == 15:
             thisGame.SetMode(1)
 
-
-
     elif thisGame.mode == 6:
-
         # pause after eating all the pellets
-        if (action != 0):  # if anything but no action it's useless
-            reward = 0
 
         thisGame.modeTimer += 1
 
@@ -2437,13 +2375,8 @@ def step(action):
             #
             # oldFillColor = thisLevel.fillColor
 
-
-
     elif thisGame.mode == 7:
-
         # flashing maze after finishing level
-        if (action != 0):  # if anything but no action it's useless
-            reward = 0
 
         thisGame.modeTimer += 1
 
@@ -2473,12 +2406,8 @@ def step(action):
 
             thisGame.SetMode(8)
 
-
-
     elif thisGame.mode == 8:
         # blank screen before changing levels
-        if (action != 0):  # if anything but no action it's useless
-            reward = 0
 
         thisGame.modeTimer += 1
 
@@ -2517,40 +2446,99 @@ def step(action):
 
     pygame.display.flip()
 
-    image = pygame.surfarray.array3d(pygame.display.get_surface())
-
     clock.tick(FPS)
 
-    return [image, reward, terminal, tact]
+    return taken_action
 
 
-def GetScore():
+def step(action, print_output=False):
+    """
+    Manual stepping function
+    :param action:
+    :return: image, reward, terminal, action
+    """
+    image = pygame.surfarray.array3d(pygame.display.get_surface())
+    reward = ALIVERW
+    terminal = 0
+
+    mode = thisGame.mode
+
+    x = player.x
+    y = player.y
+    score = thisGame.score
+
+    taken_action = render(action)
+
+    pos_changed = (player.x != x) | (player.y != y)
+
+    # Calculate the reward
+    sdif = thisGame.score - score
+
+    if mode == 1:
+        if (thisGame.mode == 2) or (thisGame.mode == 3):
+            reward = HITGHOSTDET
+            print(thisGame.mode)
+            terminal = 1
+        elif sdif > 100:
+            reward = CATCHGHOSTRW
+            terminal = 1  # For greyscale
+        elif sdif > 0:
+            reward = PELLETRW
+        elif pos_changed:
+            reward = ALIVERW
+        elif taken_action == 0:
+            reward = STILLDET
+        else:
+            reward = STUCKDET
+    elif mode == 3:
+        if taken_action == 5:
+            reward = STARTGAMERW
+        else:
+            reward = STUCKDET
+    else:
+        if taken_action != 0:
+            reward = 0
+
+    if print_output:
+        print("Reward: %.3f Terminal: %d  ACT: %d" % (reward, terminal, taken_action))
+
+    return [image, reward, terminal, taken_action]
+
+
+def get_score():
     return thisGame.score
 
 
-def IsGameOver():
+def is_game_over():
     return thisGame.mode == 3
 
 
-mode = 0
+run_mode = 0
+
+
 def main():
     parser = argparse.ArgumentParser(description='A Pacman game.')
     parser.add_argument('-run',action='store_true')
     parser.add_argument('-step', action='store_true')
     args = vars(parser.parse_args())
-    global mode
+    global run_mode
     if args['run']:
-        mode = 1
+        run_mode = 1
     if args['step']:
-        mode = 2
+        run_mode = 2
+        print("Press Space to step.")
+
 
 if __name__ == "__main__":
     main()
 
-if mode == 1:
+if run_mode == 1:
     while True:
-        step(0)
-elif mode == 2:
+        CheckIfCloseButton(pygame.event.get())
+        render(0)
+elif run_mode == 2:
     while True:
-        if pygame.key.get_pressed()[pygame.K_END]:
-            step(0)
+        CheckIfCloseButton(pygame.event.get())
+        state = pygame.key.get_pressed()
+        if state[pygame.K_SPACE]:
+            step(0, True)
