@@ -59,13 +59,12 @@ elif backend == 'tensorflow':
         if device.device_type == 'GPU':
             gpu = True
 
-
     if gpu:
         with tf.device('/gpu:0'):
             op = tf.exp(x)
             with tf.Session(config=tf.ConfigProto(log_device_placement=True)) as sess:
                 t0 = time.time()
-                for i in range(iter):
+                for i in range(iters):
                     print("Result", sess.run(op))
                     print("True Values", tv)
 
